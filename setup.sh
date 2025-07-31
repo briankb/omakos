@@ -42,7 +42,8 @@ check_internet_connection
 ###############################################################################
 # OPTION: Install Cursor IDE
 ###############################################################################
-if ask "Would you like to install Cursor IDE?" Y; then
+read -p "Would you like to install Cursor IDE? (y/n): " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
   INSTALL_CURSOR=true
 else
   INSTALL_CURSOR=false

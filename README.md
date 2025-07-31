@@ -23,6 +23,8 @@ Run this single command in your terminal:
 ```sh
 curl -L https://raw.githubusercontent.com/yatish27/omakos/main/install.sh | bash
 ```
+During setup you'll be asked whether to install [Cursor IDE](https://cursor.sh/).
+Choose "n" to skip it if you prefer another editor.
 
 ### Option 2: Manual Install
 
@@ -191,6 +193,7 @@ The script is designed to be customizable. You can:
 - Modify the [`Brewfile`](configs/Brewfile) to add/remove packages
 - Adjust macOS settings in [`scripts/mac_setup.sh`](scripts/mac_setup.sh)
 - Modify the dotfiles in [`configs/`](configs/) directory
+- Skip Cursor IDE by setting `INSTALL_CURSOR=false` or choosing "n" when prompted
 
 ## Contributing
 

@@ -46,3 +46,4 @@ echo -e "${BLUE}Starting setup...${NC}
 
 # Run setup script
 ./setup.sh
+

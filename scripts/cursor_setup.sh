@@ -48,3 +48,4 @@ else
 fi
 
 print_success "Cursor setup completed!"
+

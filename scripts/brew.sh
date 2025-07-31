@@ -16,3 +16,4 @@ else
 fi
 echo "--------------------------------------------------------"
 print_success "Homebrew packages installed!"
+

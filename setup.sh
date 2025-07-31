@@ -40,6 +40,16 @@ chapter "Checking internet connection…"
 check_internet_connection
 
 ###############################################################################
+# OPTION: Install Cursor IDE
+###############################################################################
+if ask "Would you like to install Cursor IDE?" Y; then
+  INSTALL_CURSOR=true
+else
+  INSTALL_CURSOR=false
+fi
+export INSTALL_CURSOR
+
+###############################################################################
 # PROMPT: Password
 ###############################################################################
 chapter "Caching password…"
@@ -106,8 +116,10 @@ source ./scripts/zsh_setup.sh
 ###############################################################################
 # SETUP: Cursor
 ###############################################################################
-chapter "Setting up Cursor…"
-source ./scripts/cursor_setup.sh
+if [ "$INSTALL_CURSOR" = "true" ]; then
+  chapter "Setting up Cursor…"
+  source ./scripts/cursor_setup.sh
+fi
 
 ###############################################################################
 # SETUP: Git
